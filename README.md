@@ -30,16 +30,22 @@ PostCSS plugin to combine css rules (selectors) that have (fully or partially) i
 ## Installation
 
 ```sh
-npm i postcss-merge-rules-plus --save-dev
+npm install git+https://github.com/Dezzign/postcss-merge-rules-plus.git --save-dev
 ```
 
 ## Usage
 
-```es6
-import { src, dest } from 'gulp';
-import gutil         from 'gulp-util';
-import postcss       from 'gulp-postcss';
-import mergeRulePlus from 'postcss-merge-rules-plus';
+```
+module.exports = {
+    plugins: [
+        require("autoprefixer")({
+            overrideBrowserslist: ["> 0.5% in US", "Safari > 9"]
+        }),
+        require('postcss-combine-media-query'),
+        **require('postcss-merge-rules-plus'),**
+        require('postcss-merge-rules')
+    ]
+};
 
 
 
