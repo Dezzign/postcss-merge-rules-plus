@@ -42,7 +42,7 @@ module.exports = {
             overrideBrowserslist: ["> 0.5% in US", "Safari > 9"]
         }),
         require('postcss-combine-media-query'),
-        **require('postcss-merge-rules-plus'),**
+        require('postcss-merge-rules-plus'),
         require('postcss-merge-rules')
     ]
 };
